@@ -3,9 +3,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import io
 
-web_apps = st.sidebar.selectbox("Select Web-applications",
-                                ("EDA", "Distribution"))
-
+web_apps = st.sidebar.selectbox("Select Web-applications", "EDA")
 
 if web_apps == "EDA":
 
@@ -19,7 +17,7 @@ if web_apps == "EDA":
       st.write(df)
 
     column_type = st.sidebar.selectbox('Select data type',
-                                       ("Numerical", "Categorical", "Bool", "Date"))
+                                       ("Numerical", "Categorical"))
 
     if column_type == "Numerical":
       numerical_column = st.sidebar.selectbox(
